@@ -25,5 +25,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [self.scroller setScrollEnabled:YES];
+    [self.scroller setContentSize:CGSizeMake(0, 1500)];
+}
 
+-(void)viewDidLayoutSubviews{
+    [self.scroller setContentSize:CGSizeMake(0, 1500)];
+}
 @end
